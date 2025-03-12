@@ -51,6 +51,31 @@ div.setup-table{
     background-color: #FFF1C8;
 }
 
+.fullscreen{
+    position: absolute;
+    padding: .5em;
+    background-color: #ffffff88;
+    backdrop-filter: blur(12px);
+    cursor: pointer;
+    opacity: 0;
+    transition: .5s;
+    z-index: 1;
+}
+
+.expand{
+    min-width: 100vw !important;
+    padding: 0 !important;
+}
+
+.hidden{
+    display: none !important;
+}
+
+.monitor:hover .fullscreen{
+    opacity: 1;
+    transition: .5s;
+}
+
 .monitor{
     width: 80%;
     min-height: 100vh;

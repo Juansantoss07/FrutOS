@@ -7,9 +7,25 @@ function ViewModel() {
     const outputElement = document.getElementById('output');
     const telaAreaTrabalho = document.querySelector('.area-trabalho');
     const telaLoader = document.querySelector('.tela-loader');
+    const monitor = document.querySelector('.monitor');
+    const gabinete = document.querySelector('.gabinete');
+    
     var self = this;
     
     self.telaConteudoLigando = ko.observable('');
+
+    self.buttonFullscreen = function (){
+        monitor.classList.toggle('expand');
+        gabinete.classList.toggle('hidden');
+
+        if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen().catch(err => {
+                console.log(`Erro ao entrar em fullscreen: ${err.message}`);
+            });
+        } else {
+            document.exitFullscreen();
+        }
+    }
 
     const palavras = [
         "Iniciando sistema...",
