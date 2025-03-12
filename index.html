@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>FrutOS</title>
+</head>
+<body>
+
+    <div class="popup">
+        <div class="container-pop-up">
+            <span>Seja bem-vindo(a) ao FrutOS, um simulador de sistema operacional desktop FrutigerAereo expirado no Windows 7. Para usar, clique no botão Power da CPU, localizado do lado direito da sua tela.</span>
+
+            <span class="close-popup">
+                <button>Okay</button>
+             </span>
+        </div>
+    </div>
+
+    <div class="setup-table">
+        <div class="monitor">
+            <div class="tela-conteudo">
+                <div id="output" class="tela-conteudo-ligando-sistema" data-bind="text: telaConteudoLigando"></div>
+
+                <div class="conteudo-pc-on-login">
+                    <div class="login-perfil">
+                        
+                    </div>
+
+                    <button>ENTRAR</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="gabinete">
+            <div class="cds-rom-gabinete">
+                <div class="entrada-cd"></div>
+                <div class="entrada-cd">
+                    <div class="entrada-cd-elementos"></div>
+                </div>
+            </div>
+            <div class="cds-rom-gabinete">
+                <button class="power" data-bind="click: buttonPower"></button>
+            </div>
+        </div>
+    </div>
+
+    <script type='text/javascript' src='knockout-3.5.1.js'></script>
+    <script src="popup.js"></script>
+    <script src="power-pc.js"></script>
+</body>
+</html>
