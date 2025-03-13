@@ -18,7 +18,7 @@
     bottom: 0;
     background: #000000e0;
     backdrop-filter: blur(12px);
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
 }
@@ -260,6 +260,7 @@ div.setup-table{
     padding: .5em;
     background: rgba(255, 255, 255, 0.3);
     height: 40px;
+    z-index: 2;
 }
 
 .section-button-windows{
@@ -271,6 +272,65 @@ div.setup-table{
     border: none;
     position: absolute;
     bottom: -2em;
+    cursor: pointer;
+}
+
+.barra-tarefas .button-start-windows img:hover{
+    filter: brightness(1.2);;
+}
+
+.menu-windows {
+    width: 30%;
+    background: linear-gradient(to top, #868b89, #3b3d3c);
+    height: 60%;
+    position: absolute;
+    bottom: 40px;
+    border-radius: 0 7px 0 0;
+    z-index: 1;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 52%);
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    display: none;
+}
+
+.menu-windows .menu-left {
+    width: 60%;
+    background: #fff;
+    border-radius: 6px;
+    padding: .5em;
+}
+
+.menu-windows .menu-right {
+    width: 40%;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.active{
+    display: flex !important;
+}
+
+.menu-rigth-bottom button{
+    background: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borda sutil */
+    color: white;
+    padding: .1em 1em;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 5px; /* Bordas arredondadas */
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); /* Sombra para texto */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); /* Sombra externa para dar efeito de elevação */
+    transition: all 0.3s ease; /* Transição suave */
+    cursor: pointer;
+}
+
+.menu-rigth-bottom button:hover{
+    background: rgba(255, 255, 255, 0.3); /* Efeito de brilho ao passar o mouse */
+    border-color: rgba(255, 255, 255, 0.6); /* Borda mais clara ao passar o mouse */
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
 }
 
 /* mobile */

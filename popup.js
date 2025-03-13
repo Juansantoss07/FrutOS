@@ -6,3 +6,13 @@ const button = document.querySelector('.close-popup');
 button.addEventListener('click', () => {
     popup.style.display = 'none';
 })
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Verifica se o usuário já viu o popup
+    if (!localStorage.getItem("popupVisto")) {
+        popup.style.display = "flex"; // Exibe o popup
+
+        // Marca que o popup já foi visto
+        localStorage.setItem("popupVisto", "true");
+    }
+});

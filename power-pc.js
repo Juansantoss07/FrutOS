@@ -9,10 +9,27 @@ function ViewModel() {
     const telaLoader = document.querySelector('.tela-loader');
     const monitor = document.querySelector('.monitor');
     const gabinete = document.querySelector('.gabinete');
+    const menuWindowsStart = document.querySelector('.menu-windows');
     
     var self = this;
     
     self.telaConteudoLigando = ko.observable('');
+
+    self.buttonEncerrar = function (){
+        telaLoader.style.display = 'flex';
+        telaAreaTrabalho.style.display = 'none';
+
+        let audioEncerrar = new Audio('sound/windows7encerrar.mp3');
+        audioEncerrar.play();
+
+        setTimeout(() => {
+            location.reload(); // Recarrega a página completamente
+        }, 3000);
+    }
+
+    self.buttonWindowsStart = function (){
+        menuWindowsStart.classList.toggle('active');
+    }
 
     self.buttonFullscreen = function (){
         monitor.classList.toggle('expand');
